@@ -1,0 +1,99 @@
+canvas/
+│
+├── admin.py
+├── student.py
+├── instructor.py
+├── utils.py
+│
+├── data/
+│   ├── admin_credentials.csv
+│   ├── students.csv
+│   ├── instructors.csv
+│   ├── courses.csv
+│   └── enrollments.csv
+│
+└── classes/
+    ├── user.py
+    ├── student_class.py
+    ├── instructor_class.py
+    └── course_class.py
+
+
+
+appending to csv file.
+planning out the classes what methods and attributes they have
+what file io functions will we have. Write a function that takes the path to the file and writes it to the
+file.
+Test each class individually making an instance of that class make sure all of the attributes are being set 
+correctly.
+Make sure the classes are working together and then make a menu that ties all of the classes together.
+Sub menus within that.
+
+
+Page
+2
+of 2
+CSCI 23000 Computing I, Spring 2024
+Final Project
+Description
+You will implement a mini version of Canvas, with data stored in csv files. You will implement an admin
+module, a student module and an instructor module. When the admin module runs, the user will login
+and be able to add students, add instructors, add courses and add course enrollment data. The
+information will be saved into csv files. When the student module runs, the user will login and be able to
+see the courses they take (based on data entered by the admin and stored in csv files). When the
+instructor module runs, the instructor will see all the courses he/she is assigned to teach. Whenever an
+admin enters more information in future runs, it will append to the existing csv files.
+Requirements and Rubric
+I. Admin Module
+1. Admin login control: manually create a csv file to store admin usernames and
+passwords(at least three admins). This file will be used to authenticate admins. This is
+the only csv file created by you. All other csv files will be generated through coding. (5’)
+2. An admin will only be allowed to enter the wrong username/password combination 5
+times. (5’)
+3. An authenticated admin will be provided options to
+a. add a new student. Information can include but not be limited to first name, last
+name, unique username, and password. Must ensure that each username is
+unique among students. Student information will go into a csv file. (5’)
+b. add an instructor. Information can include but not be limited to first name, last
+name, unique username, password, title (only “assistant professor”, “associate
+professor”, “professor” is allowed). Must ensure that each username is unique
+among instructors. Instructor information will go into a csv file. (5’)
+c. add a new course. Information can include not be limited to a unique course
+number, course title, instructor username. Must ensure that each course
+number is unique. Course information will go into a csv file. (5’)
+d. add a course enrollment. Each enrollment contains a unique student username
+and a unique course number. Duplicate rows are not allowed. Enrollment
+information will go into a csv file. (5’)
+e. See all the student information. Outputs must be nicely formatted. (5’)
+f. See all the instructor information. Outputs must be nicely formatted. (5’)
+g. See all the course information. Outputs must be nicely formatted. (5’)
+h. See all the enrollment information. Outputs must be nicely formatted. (5’)
+II. Student Module
+1. Login control: use the csv file generated in the admin module to authenticate a student.
+A student will only be allowed to enter the wrong username/password combination 5
+times. (5’)
+2. An authenticated student will see all the courses he/she is enrolled in. The data will be
+retrieved from the enrollment file and course file. (5’)
+3. Outputs must be nicely formatted. (5’)
+III. Instructor Module
+1. Login control: use the csv file generated in the admin module to authenticate an
+instructor and will only be allowed to enter the wrong username/password combination
+5 times. (5’)
+2. An authenticated instructor will see all the courses he/she is assigned to teach. The data
+will be retrieved from the course file. (5’)
+3. Outputs must be nicely formatted. (5’)
+IV. For All Modules
+1. Use utility file(s) to store utility functions, such as user verification, login control, add a
+student, add an instructor, add a course, add an enrollment, view students, view
+instructors, view courses, view enrollments, check uniqueness etc. (5’)
+2. Object Oriented programming methods must be used.
+a. The class created must include but is not limited to Student, Instructor and
+Course. Define meaningful properties and methods in each class. One of the
+properties of a Course class must be an instructor object. (5’)
+b. Create a parent class called User, and inherited by Student and Instructor
+classes. Inheritance must be well implemented. (5’)
+3. File names must be meaningful and indicate the purpose. Separate executable files with
+utility files and class files. (5’)
+Submission
+Put all your files in one folder (including the admin csv file), zip up the folder, and submit the zip file.
+Your zip file name must be YourFullNameFinalProject.zip.
